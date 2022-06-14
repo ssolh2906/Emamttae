@@ -1,0 +1,84 @@
+{% extends 'board/base.html' %}
+
+
+    {% block content %}
+    <body>
+        <div>
+            <p>다른 주</p>
+            <a href="01">01</a>
+            <a href="02">02</a>
+            <a href="03">03</a>
+            <a href="04">04</a>
+            <a href="05">05</a>
+            <a href="06">06</a>
+            <a href="07">07</a>
+            <a href="08">08</a>
+            <a href="09">09</a>
+            <a href="10">10</a>
+            <a href="11">11</a>
+            <a href="12">12</a>
+            <a href="13">13</a>
+            <a href="14">14</a>
+            <a href="15">15</a>
+            <a href="16">16</a>
+            <a href="17">17</a>
+            <a href="18">18</a>
+            <a href="19">19</a>
+            <a href="20">20</a>
+            <a href="21">21</a>
+            <a href="22">22</a>
+            <a href="23">23</a>
+            <a href="24">24</a>
+            <a href="25">25</a>
+            <a href="26">26</a>
+            <a href="27">27</a>
+            <a href="28">28</a>
+            <a href="29">29</a>
+            <a href="30">30</a>
+            <a href="31">31</a>
+            <a href="32">32</a>
+            <a href="33">33</a>
+            <a href="34">34</a>
+            <a href="35">35</a>
+            <a href="36">36</a>
+            <a href="37">37</a>
+            <a href="38">38</a>
+            <a href="39">39</a>
+            <a href="40">40</a>
+            <a href="41">41</a>
+            <a href="42">42</a>
+            <a href="43">43</a>
+            <a href="44">44</a>
+            <a href="45">45</a>
+            <a href="46">46</a>
+            <a href="47">47</a>
+            <a href="48">48</a>
+            <a href="49">49</a>
+            <a href="50">50</a>
+            <a href="51">51</a>
+            <a href="52">52</a>
+            <a href="53">53</a>
+            <a href="54">54</a>
+        </div>
+        <div>
+
+                <h2><a>{{ week }} 번째 주</a></h2>
+                <h5>모든 {{ week }}번째주의 기록을 톳아봅니다</h5>
+                <br>
+
+            {% for week in weeks %}
+                <p>week</p>
+            {% endfor %}
+
+        </div>
+
+<!--        <a href="{% url 'board:add' %}"><span class="glyphicon glyphicon-plus"></span></a>-->
+
+        {% for post in posts %}
+            <h3>{{post.title}}</h3>
+            <p>{{ post.created_date }}</p>
+            <p>{{ post.content |linebreaks}}</p>
+            <br>
+        {% endfor %}
+    </body>
+    {% endblock %}

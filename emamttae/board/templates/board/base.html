@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emamttae</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+</head>
+<body style="padding-top:10px;">
+
+<div>
+        <h1><a href="/board/">EMAMTTAE</a> </h1>
+</div>
+
+<div style="padding-top:10px; padding-left:20px">
+    {% block content %}{% endblock %}
+</div>
+
+
+</body>
+</html>

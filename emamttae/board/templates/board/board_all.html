@@ -1,0 +1,12 @@
+{% extends 'board/base.html' %}
+
+
+    {% block content %}
+        {% for board in boards %}
+          <h3><a href='{{ board.get_absolute_url }}'>{{ board.title }}</a> </h3>
+            최근 업데이트 : {{ board.modified_date|date:"N d, Y" }}
+            <p>{{ board.description }}</p>
+        {% endfor %}
+    {% endblock %}
+
+
